@@ -1,0 +1,28 @@
+{
+  "name": "frontend-work-test-scss",
+  "version": "1.0.0",
+  "description": "Front-end work test based on Sass.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass ./test/scss/styles.scss ./test/styles.css --no-source-map --style compressed",
+    "prettier": "prettier --write .",
+    "stylelint": "stylelint '**/*.scss'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ourstudio-se/frontend-work-test-scss.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ourstudio-se/frontend-work-test-scss/issues"
+  },
+  "homepage": "https://github.com/ourstudio-se/frontend-work-test-scss#readme",
+  "devDependencies": {
+    "prettier": "^2.8.4",
+    "sass": "^1.59.3",
+    "stylelint": "^15.2.0",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^7.0.1"
+  }
+}

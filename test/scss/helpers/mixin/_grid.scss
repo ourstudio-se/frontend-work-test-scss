@@ -1,0 +1,52 @@
+/// Mixins used to prefix grid related properties
+
+/* stylelint-disable property-no-vendor-prefix */
+
+@mixin grid-display($display: grid) {
+  display: -ms-#{$display};
+  display: #{$display};
+}
+
+@mixin grid-template-columns($columns...) {
+  -ms-grid-columns: $columns;
+  grid-template-columns: $columns;
+}
+
+@mixin grid-template-rows($rows...) {
+  -ms-grid-rows: $rows;
+  grid-template-rows: $rows;
+}
+
+@mixin grid-column($columns...) {
+  -ms-grid-column: $columns;
+  -ms-grid-column-span: $columns;
+  grid-column: $columns;
+}
+
+@mixin grid-row($rows...) {
+  -ms-grid-row: $rows;
+  -ms-grid-row-span: $rows;
+  grid-row: $rows;
+}
+
+@mixin grid-auto-columns($track-size: auto) {
+  -ms-grid-columns: $track-size;
+  grid-auto-columns: $track-size;
+}
+
+@mixin grid-auto-rows($track-size: auto) {
+  -ms-grid-rows: $track-size;
+  grid-auto-rows: $track-size;
+}
+
+@mixin grid-align-self($align: auto) {
+  -ms-grid-row-align: $align;
+  align-self: $align;
+}
+
+@mixin grid-justify-self($justify: auto) {
+  -ms-grid-column-align: $justify;
+  justify-self: $justify;
+}
+
+/* stylelint-enable property-no-vendor-prefix */

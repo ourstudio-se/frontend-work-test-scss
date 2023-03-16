@@ -1,0 +1,23 @@
+/// Mixin used to add styling to input placeholder
+
+/* stylelint-disable selector-no-vendor-prefix */
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+/* stylelint-enable selector-no-vendor-prefix */

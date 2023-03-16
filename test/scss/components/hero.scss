@@ -1,0 +1,33 @@
+@use "../helpers" as *;
+
+.hero {
+  @include flex-display;
+  @include align-items(center);
+
+  position: relative;
+  padding: calc(var(--main-gutter) * 2);
+  background-color: #f1f1f1;
+  aspect-ratio: 16 / 5;
+  isolation: isolate;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &__content {
+    @include flex-display;
+    @include flex-direction(column);
+    @include align-items(flex-start);
+
+    max-width: 600px;
+    gap: size(3);
+  }
+}

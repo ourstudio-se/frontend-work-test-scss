@@ -1,0 +1,28 @@
+@use "../helpers" as *;
+
+.heading {
+  margin: 0;
+  font-weight: 600;
+
+  &:not(&--no-margin) {
+    margin-bottom: size(4);
+  }
+
+  &--1 {
+    font-size: 2rem;
+    line-height: 1.125;
+
+    @include breakpoint($md) {
+      font-size: 4rem;
+    }
+  }
+
+  &--2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+
+    @include breakpoint($md) {
+      font-size: 2.5rem;
+    }
+  }
+}

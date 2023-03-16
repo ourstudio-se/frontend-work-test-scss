@@ -1,0 +1,17 @@
+/// Mixins used to prefix columns related properties
+
+/* stylelint-disable property-no-vendor-prefix */
+
+@mixin columns($value...) {
+  -webkit-columns: $value;
+  -moz-columns: $value;
+  columns: $value;
+}
+
+@mixin column-gap($value) {
+  -webkit-column-gap: $value;
+  -moz-column-gap: $value;
+  column-gap: $value;
+}
+
+/* stylelint-enable property-no-vendor-prefix */

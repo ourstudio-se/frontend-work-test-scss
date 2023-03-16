@@ -1,0 +1,25 @@
+@use "../helpers" as *;
+
+.footer {
+  --footer-spacing: #{size(5)};
+
+  @include breakpoint($md) {
+    --footer-spacing: #{size(10)};
+  }
+
+  padding: var(--footer-spacing) 0;
+  margin-top: auto;
+  background-color: var(--c-accent);
+
+  &__logo {
+    display: block;
+    width: size(10);
+    fill: currentColor;
+  }
+
+  &__copyright {
+    margin-top: var(--footer-spacing);
+    font-size: 0.875rem;
+    color: var(--c-text-muted);
+  }
+}

@@ -1,0 +1,12 @@
+$sm: 600px;
+$lt-sm: $sm - 1px;
+$md: 900px;
+$lt-md: $md - 1px;
+$lg: 1500px;
+$lt-lg: $lg - 1px;
+
+@mixin breakpoint($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

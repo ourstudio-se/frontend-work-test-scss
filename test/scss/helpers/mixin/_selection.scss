@@ -1,0 +1,15 @@
+/// Mixin used to add styling to text selection
+
+/* stylelint-disable selector-no-vendor-prefix */
+
+@mixin selection {
+  ::selection {
+    @content;
+  }
+
+  ::-moz-selection {
+    @content;
+  }
+}
+
+/* stylelint-enable selector-no-vendor-prefix */

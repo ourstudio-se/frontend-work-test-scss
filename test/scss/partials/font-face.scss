@@ -1,0 +1,31 @@
+@use "../helpers" as *;
+
+$font-path: "./assets/font/";
+
+@font-face {
+  font-family: Archia;
+  src: url("#{$font-path}Archia-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Archia;
+  src: url("#{$font-path}Archia-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Archia;
+  src: url("#{$font-path}Archia-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Archia;
+  src: url("#{$font-path}Archia-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}

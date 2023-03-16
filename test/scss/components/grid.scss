@@ -1,0 +1,15 @@
+@use "../helpers" as *;
+
+.grid {
+  &__list {
+    display: grid;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: size(3);
+
+    @include breakpoint($md) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}

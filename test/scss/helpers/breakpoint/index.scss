@@ -1,0 +1,5 @@
+/// Forwards all breakpoints. To access them in other files,
+/// import this file using:
+/// @use '[path_to_helpers]/helpers/breakpoint' as *;
+
+@forward "_breakpoint";

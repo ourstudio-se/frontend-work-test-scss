@@ -1,0 +1,53 @@
+/// Base styling
+
+@use "../helpers" as *;
+
+:root {
+  --main-gutter: #{size(3)};
+  --c-bg: #fff;
+  --c-text: #3d4650;
+  --c-text-muted: #767c82;
+  --c-primary-bg: #FF5C4C;
+  --c-primary-fg: #fff;
+  --c-accent: #FAF9F8;
+  --c-overlay-rgb: 0, 0, 0;
+
+  @include breakpoint($md) {
+    --main-gutter: #{size(12.5)};
+  }
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  @include text-size-adjust(100%); // Prevent font scaling in landscape while allowing user zoom
+
+  min-height: 100vh;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  @include flex-display;
+  @include flex-direction(column);
+
+  margin: 0;
+  background-color: var(--c-bg);
+  font-family: "Archia", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--c-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @supports (font-size-adjust: 1) {
+    font-size-adjust: 0.5;
+  }
+}

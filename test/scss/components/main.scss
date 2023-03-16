@@ -1,0 +1,17 @@
+@use "../helpers" as *;
+
+.main {
+  --main-spacing: #{size(4)};
+
+  @include breakpoint($md) {
+    --main-spacing: #{size(10)};
+  }
+
+  margin-bottom: var(--main-spacing);
+
+  &__section {
+    & + & {
+      margin-top: var(--main-spacing);
+    }
+  }
+}

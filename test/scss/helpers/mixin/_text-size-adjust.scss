@@ -1,0 +1,11 @@
+/// Mixins used to prefix text-size-adjust property
+
+/* stylelint-disable property-no-vendor-prefix */
+
+@mixin text-size-adjust($value: auto) {
+  -webkit-text-size-adjust: $value;
+  -moz-text-size-adjust: $value;
+  text-size-adjust: $value;
+}
+
+/* stylelint-enable property-no-vendor-prefix */
