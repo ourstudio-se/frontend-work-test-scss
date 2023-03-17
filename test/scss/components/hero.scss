@@ -5,10 +5,31 @@
   @include align-items(center);
 
   position: relative;
-  padding: calc(var(--main-gutter) * 2);
-  background-color: #f1f1f1;
-  aspect-ratio: 16 / 5;
   isolation: isolate;
+
+  @include breakpoint($lt-md) {
+    @include align-items(flex-end);
+
+    min-height: 50vh;
+    padding: var(--main-gutter);
+    padding-top: calc(var(--main-gutter) * 6);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(45deg, rgba(var(--c-overlay-rgb), 0.2), rgba(var(--c-overlay-rgb), 0));
+      z-index: -1;
+    }
+  }
+
+   @include breakpoint($md) {
+    padding: calc(var(--main-gutter) * 2) var(--main-gutter);
+   }
+
+   @include breakpoint($lg) {
+    padding: calc(var(--main-gutter) * 2);
+   }
 
   &__image {
     position: absolute;
@@ -17,17 +38,39 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
+    z-index: -2;
     user-select: none;
     pointer-events: none;
+
+    @include breakpoint($lt-md) {
+      object-position: 80% 50%;
+    }
   }
 
   &__content {
+    --content-gap: #{size(2)};
+
+    @include breakpoint($md) {
+      --content-gap: #{size(3)};
+    }
+
     @include flex-display;
     @include flex-direction(column);
     @include align-items(flex-start);
 
     max-width: 600px;
-    gap: size(3);
+    gap: var(--content-gap);
+
+    @include breakpoint($lt-md) {
+      color: var(--c-text-inverted);
+    }
+  }
+
+  &__heading-muted {
+    display: block;
+
+    @include breakpoint($lt-md) {
+      opacity: 0.7;
+    }
   }
 }

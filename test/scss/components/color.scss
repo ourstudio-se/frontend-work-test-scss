@@ -1,0 +1,28 @@
+@use "../helpers" as *;
+
+.color {
+  --size: #{size(2)};
+  --border-width: calc(var(--size) / 4);
+  --inner-size: calc(var(--size) - var(--border-width) * 2);
+
+  position: relative;
+  width: var(--inner-size);
+  height: var(--inner-size);
+  border-radius: 50%;
+  background: var(--color-inner);
+  border: var(--border-width) solid;
+  border-color: var(--color-outer-1) var(--color-outer-2)  var(--color-outer-2) var(--color-outer-1);
+  box-sizing: content-box;
+
+  &__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(0 0 99.9% 99.9%);
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}

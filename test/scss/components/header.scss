@@ -1,18 +1,24 @@
 @use "../helpers" as *;
 
 .header {
+  --header-gutter-inline: var(--main-gutter);
+
+  @include breakpoint($md) {
+    --header-gutter-inline: #{size(5)};
+  }
+
   @include flex-display;
   @include align-items(center);
 
   position: relative;
   height: size(12);
-  padding: 0 calc(var(--main-gutter) * 0.4);
+  padding: 0 var(--header-gutter-inline);
   background-color: var(--c-bg);
 
   &__logo {
     width: size(10);
 
-    @media (min-width: 800px) {
+    @include breakpoint($md) {
       @include transform(translate(-50%, -50%));
 
       position: absolute;
@@ -29,6 +35,10 @@
     padding: 0;
     margin: 0;
     gap: size(6);
+
+    @include breakpoint($lt-md) {
+      display: none;
+    }
   }
 
   &__link {
@@ -49,6 +59,20 @@
     padding: 0;
     margin: 0;
     margin-left: auto;
-    gap: size(4);
+    gap: size(1.5);
+
+    @include breakpoint($md) {
+      gap: size(4);
+    }
+  }
+
+  &__action-item {
+    font-size: size(3);
+
+    &--hidden-md {
+      @include breakpoint($md) {
+        display: none;
+      }
+    }
   }
 }
