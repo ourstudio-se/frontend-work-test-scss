@@ -8,7 +8,7 @@
   --c-text: #3d4650;
   --c-text-muted: #767c82;
   --c-text-inverted: #fff;
-  --c-primary-bg: #FF5C4C;
+  --c-primary: #FF5C4C;
   --c-primary-fg: #fff;
   --c-accent: #FAF9F8;
   --c-overlay-rgb: 0, 0, 0;
@@ -26,7 +26,7 @@
 
 html,
 body {
-  @include text-size-adjust(100%); // Prevent font scaling in landscape while allowing user zoom
+  @include text-size-adjust(100%);
 
   min-height: 100vh;
 }
