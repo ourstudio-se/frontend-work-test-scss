@@ -12,7 +12,7 @@ npm run sass
 
 ### Sass formatting
 
-This project uses [Prettier](https://prettier.io/) to format the _scss_. To format all _scss_ files, run the following command.
+This project uses [Prettier](https://prettier.io/) to format the code. To format all files, run the following command.
 
 ```bash
 npm run prettier
